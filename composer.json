@@ -1,0 +1,17 @@
+{
+    "name": "gusteausdevteam/gusteaus",
+    "description": "Landing page and online menu for Gusteau's, a French restaurant",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Gusteaus\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Silva Santos",
+            "email": "gabrielss432112@gmail.com"
+        }
+    ],
+    "require": {}
+}
