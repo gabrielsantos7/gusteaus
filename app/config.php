@@ -1,13 +1,11 @@
 <?php 
 
-const VIEW_PATH = './app/Views/';
-
-const NS_CONTROLLERS = "\\Atividades\\Controllers\\";
-const BASE_URL = "http://localhost/atividadesif/";
-
-const DB = [
+define('VIEW_PATH', './app/Views/');
+define('NS_CONTROLLERS', "\\Gusteaus\\Controllers\\");
+define('BASE_URL', "http://localhost/gusteaus/");
+define('DB', [
     'servidor' => "localhost",
-    'banco' =>   "atividadesifba",
+    'banco' => "gusteaus",
     'usuario' => 'root',
     'senha' => ''
-];
+]);

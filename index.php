@@ -7,6 +7,7 @@ use Gusteaus\Controllers\LoginController;
 use Gusteaus\Controllers\MenuController;
 
 require __DIR__ . '/vendor/autoload.php';
+require './app/config.php';
 
 $erorController = new ErrorController();
 $homeController = new HomeController();

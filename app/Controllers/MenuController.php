@@ -6,7 +6,7 @@ use Gusteaus\Core\Controller;
 class MenuController extends Controller {
   public function index() 
   {
-    echo "Cardapio";
-    // return $this->loadView('home');
+    $this->loadView('menu');
+    // require './app/Views/menu.php';
   }
 }
