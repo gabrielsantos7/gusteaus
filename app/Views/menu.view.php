@@ -1,8 +1,8 @@
 <?php
 $cssPath = PUBLIC_PATH . 'css/menu.css';
 $jsPath = PUBLIC_PATH . 'js/menu.js';
-$imgPath = PUBLIC_PATH . 'img/';
 $title = 'Cardápio';
+
 require VIEW_PATH .  'components/header.php'
 ?>
 
@@ -311,14 +311,18 @@ require VIEW_PATH .  'components/header.php'
   <section>
     <div class="container my-5">
       <div class="row">
-        <img src="<?=PUBLIC_PATH?>img/Cardapio/Img-Delivery.png" alt="Imagem de Delivery" class="col col-md-5" id="img-delivery">
+        <img src="<?=PUBLIC_PATH?>img/Cardapio/Img-Delivery.png" alt="Imagem de Delivery" class="col col-md-5"
+          id="img-delivery">
         <div class="col col-md-7" id="delivery-details">
           <h3 class="font-satisfy text-yellow">
             Serviço de Delivery: Uma Experiência de Qualidade
           </h3>
-          <p class="mt-5">Oferecemos um serviço de delivery que vai além da simples entrega de alimentos. Valorizamos a
-            qualidade, a rapidez e a segurança em cada pedido que entregamos à sua porta. Nossa equipe de funcionários
-            altamente capacitados é dedicada a garantir que sua experiência de delivery seja tão satisfatória quanto a
+          <p class="mt-5">Oferecemos um serviço de delivery que vai além da simples entrega de alimentos.
+            Valorizamos a
+            qualidade, a rapidez e a segurança em cada pedido que entregamos à sua porta. Nossa equipe de
+            funcionários
+            altamente capacitados é dedicada a garantir que sua experiência de delivery seja tão satisfatória quanto
+            a
             refeição em si. Entregamos não apenas comida, mas também a promessa de um serviço de alta qualidade e a
             garantia de sabor e conveniência em cada pedido.</p>
         </div>

@@ -17,9 +17,16 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 
-  <!-- CSS e JS do projeto -->
+  <!-- CSS do header e footer -->
+  <link rel="stylesheet" href="./public/css/header-and-footer.css">
+
+  <!-- CSS do projeto -->
   <link rel="stylesheet" href="<?=$cssPath?>">
+
+  <!-- Verifica se jsPath está definido antes de incluir o script -->
+  <?php if (isset($jsPath)): ?>
   <script src="<?=$jsPath?>" defer></script>
+  <?php endif; ?>
 
   <link rel="shortcut icon" href="<?=PUBLIC_PATH . 'img/Main/favicon.ico'?>" type="image/x-icon">
 
