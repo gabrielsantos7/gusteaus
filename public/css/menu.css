@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-satisfy {
+  font-family: "Satisfy", cursive;
+}
+
+.font-comic {
+  font-family: "Comic Neue", cursive;
+}
+
+.invisible {
+  display: none;
+}
+
+.invisible-hover {
+  display: none;
+}
+.invisible-hover:hover {
+  display: inline-flex;
+}
+
+.text-yellow {
+  color: #ffb03b;
+  font-weight: 500;
+}
+
+.txt-img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+#h2-img {
+  font-size: 3.5rem;
+  width: 80vw;
+}
+
+#p-top {
+  font-size: 1.5rem;
+}
+
+.ctn-image {
+  width: 100%;
+  height: 80vh;
+  background-image: url("img/wp-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #ffffff;
+  z-index: 0;
+}
+
+.row-items {
+  min-height: 400px;
+}
+
+#menu-itens {
+  gap: 2rem;
+}
+#menu-itens li {
+  border: 2px solid #ffb03b;
+  color: #ffb03b;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+#menu-itens li:hover {
+  background: #ffb03b;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+#menu-itens li.item-active {
+  background: #ffb03b;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #ffb03b;
+}
+
+.btn-middle {
+  background: white;
+  color: #ffb03b;
+}
+.btn-middle i {
+  font-size: 30px;
+}
+
+.card-text {
+  font-size: 20px;
+}
+
+.card-img {
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.card-img img {
+  transition: all 1s ease;
+}
+
+.card-img:hover img {
+  transform: scale(1.2);
+}
+
+.card .btn-group {
+  display: none;
+  box-shadow: none;
+}
+
+.card:hover {
+  background-color: #ffb03b;
+  border: 2px solid #ffb03b;
+}
+.card:hover img {
+  transform: scale(1.25);
+}
+.card:hover p .card-text {
+  display: none;
+}
+.card:hover .price {
+  color: #ffffff;
+}
+.card:hover .card-text {
+  display: none;
+}
+.card:hover .btn-group {
+  display: inline-flex;
+  margin-bottom: 1.2rem;
+}
+.card:hover .selected-quantity {
+  display: none;
+}
+
+.btn-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#btn-finalizar {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+#ctn-qualidades {
+  column-gap: 1rem;
+}
+
+.card-qualidades {
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3960784314);
+  margin: 1rem;
+  cursor: default;
+}
+.card-qualidades i {
+  font-size: 3rem;
+  color: #ffb03b;
+}
+.card-qualidades:hover {
+  background-color: #ffb03b;
+}
+.card-qualidades:hover h3,
+.card-qualidades:hover i {
+  color: #ffffff;
+}
+
+#img-delivery {
+  height: 300px;
+  width: auto;
+}
+
+#delivery-details {
+  border-left: 2px solid #ffb03b;
+  padding-left: 5rem;
+}
+
+#staticBackdrop {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#ctn-form-reserva {
+  background-image: url("img/wpp-form.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+form .form-label {
+  color: #ffffff;
+}
+
+form .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  color: #fff;
+  border: none;
+}
+
+form .form-control:focus {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+input::placeholder {
+  color: #919191;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-yellow {
+  border: 2px solid #ffb03b;
+  color: #ffb03b;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-yellow:hover {
+  background: #ffb03b;
+  color: #ffffff;
+}
+.btn-yellow.item-active {
+  background: #ffb03b;
+  color: #ffffff;
+}
+.btn-yellow:hover {
+  transform: scale(1.1);
+}
