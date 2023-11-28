@@ -9,3 +9,5 @@ require VIEW_PATH .  'components/header.php'
   <p>A página que você está procurando não foi encontrada. Verifique a rota e tente novamente.</p>
   <a href="<?=BASE_URL?>" class="btn btn-primary mt-5">Voltar para a página inicial</a>
 </main>
+
+<?php require VIEW_PATH .  'components/footer.php'?>
