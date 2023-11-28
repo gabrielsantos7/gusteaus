@@ -3,6 +3,10 @@ $cssPath = PUBLIC_PATH . 'css/menu.css';
 $jsPath = PUBLIC_PATH . 'js/menu.js';
 $title = 'Cardápio';
 
+require './app/Core/products.php';
+
+$bestSellers = [$mainDishes[1], $mainDishes[2],  $drinks[3], $desserts[3]];
+
 require VIEW_PATH .  'components/header.php'
 ?>
 
@@ -29,9 +33,8 @@ require VIEW_PATH .  'components/header.php'
   <section>
     <ul class="d-flex gap-2 align-items-center justify-content-center list-unstyled my-5" id="menu-itens">
       <li class="px-3 btn item-active">Mais vendidos</li>
-      <li class="px-3 btn">Espaguetes</li>
-      <li class="px-3 btn">Saladas</li>
-      <li class="px-3 btn">Churrasco</li>
+      <li class="px-3 btn">Acompanhamentos</li>
+      <li class="px-3 btn">Pratos Principais</li>
       <li class="px-3 btn">Bebidas</li>
       <li class="px-3 btn">Sobremesas</li>
     </ul>
@@ -39,19 +42,22 @@ require VIEW_PATH .  'components/header.php'
 
   <!-- Seção dos cards -->
   <section class="container-fluid" id="cardapio">
-    <div class="row row-items">
+    <!-- Mais vendidos -->
+    <div class="row row-items" id="maisVendidos">
+      <?php foreach ($bestSellers as $bestSeller) { ?>
       <div class="col-md-3">
         <div class="card text-center">
           <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
+            <img class="img-fluid" src="<?=$bestSeller['imageUrl']?>" alt="<?=$bestSeller['name']?>" />
           </div>
           <div class="card-body">
             <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
+              <?=$bestSeller['name']?>
             </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
+            <p class="text-center text-yellow price">
+              R$ <?=number_format($bestSeller['price'], 2, ',', '.')?>
+            </p>
+
             <p class="selected-quantity"></p>
 
             <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
@@ -68,108 +74,26 @@ require VIEW_PATH .  'components/header.php'
           </div>
         </div>
       </div>
+      <?php } ?>
 
-      <div class="col-md-3">
-        <div class="card text-center">
-          <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
-            </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
-            <p class="selected-quantity"></p>
-
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-dash"></i>
-              </button>
-              <button type="button" class="btn btn-middle" disabled>
-                0
-              </button>
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card text-center">
-          <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
-            </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
-            <p class="selected-quantity"></p>
-
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-dash"></i>
-              </button>
-              <button type="button" class="btn btn-middle" disabled>
-                0
-              </button>
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card text-center">
-          <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
-            </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
-            <p class="selected-quantity"></p>
-
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-dash"></i>
-              </button>
-              <button type="button" class="btn btn-middle" disabled>
-                0
-              </button>
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="row row-items">
+    <!-- Acompanhamentos -->
+    <div class="row row-items d-none" id="acompanhamentos">
+      <?php foreach ($sideDishes as $sideDishe) { ?>
       <div class="col-md-3">
         <div class="card text-center">
           <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
+            <img class="img-fluid" src="<?=$sideDishe['imageUrl']?>" alt="<?=$sideDishe['name']?>" />
           </div>
           <div class="card-body">
             <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
+              <?=$sideDishe['name']?>
             </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
+            <p class="text-center text-yellow price">
+              R$ <?=number_format($sideDishe['price'], 2, ',', '.')?>
+            </p>
+
             <p class="selected-quantity"></p>
 
             <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
@@ -186,94 +110,118 @@ require VIEW_PATH .  'components/header.php'
           </div>
         </div>
       </div>
+      <?php } ?>
 
-      <div class="col-md-3">
-        <div class="card text-center">
-          <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
-            </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
-            <p class="selected-quantity"></p>
-
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-dash"></i>
-              </button>
-              <button type="button" class="btn btn-middle" disabled>
-                0
-              </button>
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card text-center">
-          <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
-            </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
-            <p class="selected-quantity"></p>
-
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-dash"></i>
-              </button>
-              <button type="button" class="btn btn-middle" disabled>
-                0
-              </button>
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card text-center">
-          <div class="card-img card-img-top">
-            <img class="img-fluid"
-              src="https://imgs.search.brave.com/9Y2DU7X7TEIdKE6x_uUsBUTp9v10QLN30YFnsddgUus/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRpbmhhcy5jb20u/YnIvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDYvYW1pcmFs/aS1taXJoYXNoZW1p/YW4tSnFudVdsSG1E/ZkUtdW5zcGxhc2gt/MS1zY2FsZWQuanBn"
-              alt="Hambúrguer Francês" />
-          </div>
-          <div class="card-body">
-            <p class="card-text text-center font-satisfy">
-              Hambúrguer Francês
-            </p>
-            <p class="text-center text-yellow price">R$ 12,90</p>
-            <p class="selected-quantity"></p>
-
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-dash"></i>
-              </button>
-              <button type="button" class="btn btn-middle" disabled>
-                0
-              </button>
-              <button type="button" class="btn btn-outline">
-                <i class="bi bi-plus"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+
+    <!-- Pratos Principais -->
+    <div class="row row-items d-none" id="pratosPrincipais">
+      <?php foreach ($mainDishes as $mainDishe) { ?>
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-img card-img-top">
+            <img class="img-fluid" src="<?=$mainDishe['imageUrl']?>" alt="<?=$mainDishe['name']?>" />
+          </div>
+          <div class="card-body">
+            <p class="card-text text-center font-satisfy">
+              <?=$mainDishe['name']?>
+            </p>
+            <p class="text-center text-yellow price">
+              R$ <?=number_format($mainDishe['price'], 2, ',', '.')?>
+            </p>
+
+            <p class="selected-quantity"></p>
+
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-dash"></i>
+              </button>
+              <button type="button" class="btn btn-middle" disabled>
+                0
+              </button>
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php } ?>
+
+    </div>
+
+    <!-- Bebidas -->
+    <div class="row row-items d-none" id="bebidas">
+      <?php foreach ($drinks as $drink) { ?>
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-img card-img-top">
+            <img class="img-fluid" src="<?=$drink['imageUrl']?>" alt="<?=$drink['name']?>" />
+          </div>
+          <div class="card-body">
+            <p class="card-text text-center font-satisfy">
+              <?=$drink['name']?>
+            </p>
+            <p class="text-center text-yellow price">
+              R$ <?=number_format($drink['price'], 2, ',', '.')?>
+            </p>
+
+            <p class="selected-quantity"></p>
+
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-dash"></i>
+              </button>
+              <button type="button" class="btn btn-middle" disabled>
+                0
+              </button>
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php } ?>
+
+    </div>
+
+    <!-- Sobremesas -->
+    <div class="row row-items d-none" id="sobremesas">
+      <?php foreach ($desserts as $dessert) { ?>
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-img card-img-top">
+            <img class="img-fluid" src="<?=$dessert['imageUrl']?>" alt="<?=$dessert['name']?>" />
+          </div>
+          <div class="card-body">
+            <p class="card-text text-center font-satisfy">
+              <?=$dessert['name']?>
+            </p>
+            <p class="text-center text-yellow price">
+              R$ <?=number_format($dessert['price'], 2, ',', '.')?>
+            </p>
+
+            <p class="selected-quantity"></p>
+
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-dash"></i>
+              </button>
+              <button type="button" class="btn btn-middle" disabled>
+                0
+              </button>
+              <button type="button" class="btn btn-outline">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php } ?>
+
+    </div>
+
     <div class="text-center">
       <button class="btn btn-yellow item-active px-5 py-2" id="btn-finalizar" data-bs-toggle="modal"
         data-bs-target="#staticBackdrop">

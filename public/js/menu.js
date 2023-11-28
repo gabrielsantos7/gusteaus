@@ -5,6 +5,7 @@ const inputDate = document.querySelector("#data");
 const inputPhone = document.querySelector("#telefone");
 
 const cards = document.querySelectorAll(".card");
+const cardapio = document.querySelector("#cardapio");
 
 const finalizeButton = document.getElementById("btn-finalizar");
 const modalTitle = document.querySelector("#staticBackdropLabel");
@@ -69,14 +70,22 @@ inputPhone.addEventListener("input", function (event) {
 
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
+    const clickedCategory = item.textContent.trim().toLowerCase().replace(/\s+/g, '');
+    
     // Adiciona a classe active no li clicado
     item.classList.add("item-active");
-
+    
     // Remove a classe active dos demais elementos
     menuItems.forEach((otherItem) => {
       if (otherItem !== item) {
         otherItem.classList.remove("item-active");
       }
+    });
+
+    // Exibe a categoria clicada e oculta as outras
+    cardapio.querySelectorAll('.row-items').forEach((category) => {
+      const categoryId = category.id.toLowerCase();
+      category.classList.toggle('d-none', categoryId !== clickedCategory);
     });
   });
 });
