@@ -1,11 +1,13 @@
 <?php
-$cssPath = './public/css/menu.css';
-$jsPath = './public/js/menu.js';
+$cssPath = PUBLIC_PATH . 'css/menu.css';
+$jsPath = PUBLIC_PATH . 'js/menu.js';
+$imgPath = PUBLIC_PATH . 'img/';
 $title = 'Cardápio';
 require VIEW_PATH .  'components/header.php'
 ?>
 
 <main>
+  <!-- Seção inicial -->
   <section>
     <div class="ctn-image text-center">
       <div class="txt-img my-5">
@@ -23,6 +25,7 @@ require VIEW_PATH .  'components/header.php'
     </div>
   </section>
 
+  <!-- Seção do menu do cardápio -->
   <section>
     <ul class="d-flex gap-2 align-items-center justify-content-center list-unstyled my-5" id="menu-itens">
       <li class="px-3 btn item-active">Mais vendidos</li>
@@ -34,8 +37,9 @@ require VIEW_PATH .  'components/header.php'
     </ul>
   </section>
 
+  <!-- Seção dos cards -->
   <section class="container-fluid" id="cardapio">
-    <div class="row my-5 row-items">
+    <div class="row row-items">
       <div class="col-md-3">
         <div class="card text-center">
           <div class="card-img card-img-top">
@@ -303,10 +307,11 @@ require VIEW_PATH .  'components/header.php'
     </div>
   </section>
 
+  <!-- Seção do delivery -->
   <section>
     <div class="container my-5">
       <div class="row">
-        <img src="img/Img-Delivery.png" alt="Imagem de Delivery" class="col col-md-5" id="img-delivery">
+        <img src="<?=PUBLIC_PATH?>img/Cardapio/Img-Delivery.png" alt="Imagem de Delivery" class="col col-md-5" id="img-delivery">
         <div class="col col-md-7" id="delivery-details">
           <h3 class="font-satisfy text-yellow">
             Serviço de Delivery: Uma Experiência de Qualidade
@@ -321,10 +326,11 @@ require VIEW_PATH .  'components/header.php'
     </div>
   </section>
 
+  <!-- Seção dos cards de qualidades -->
   <section>
     <div class="container-fluid" id="ctn-qualidades">
       <div class="row my-5 text-center justify-content-center">
-        <div class="card-qualidades col-12 col-md-3">
+        <div class="card-qualidades col-12 col-md-4">
           <div>
             <h3 class="font-satisfy text-yellow py-3">
               Qualidade Superior
@@ -340,7 +346,7 @@ require VIEW_PATH .  'components/header.php'
           </div>
         </div>
 
-        <div class="card-qualidades col-12 col-md-3">
+        <div class="card-qualidades col-12 col-md-4">
           <div>
             <h3 class="font-satisfy text-yellow py-3">
               Segurança e Confiança
@@ -357,7 +363,7 @@ require VIEW_PATH .  'components/header.php'
           </div>
         </div>
 
-        <div class="card-qualidades col-12 col-md-3">
+        <div class="card-qualidades col-12 col-md-4">
           <div>
             <h3 class="font-satisfy text-yellow py-3">
               Rapidez e Conveniência
@@ -376,6 +382,7 @@ require VIEW_PATH .  'components/header.php'
     </div>
   </section>
 
+  <!-- Seção do Form -->
   <section>
     <div class="container-fluid" id="ctn-form-reserva">
       <form action="" class="my-5" id="form-reserva">
