@@ -1,3 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&display=swap");
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Classes utilitárias */
+.font-satisfy {
+  font-family: "Satisfy", cursive;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-comic {
+  font-family: "Comic Neue", cursive;
+}
+
+.font-yellow{
+  color:#ffb03b;
+}
+
+.font-white{
+  color:#ffffff;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+.bg-yellow {
+  background-color:#ffb03b;
+}
+
+.bg-gray {
+  background-color: #444;
+}
+
 header {
   background-color: goldenrod;
   color: #333;
