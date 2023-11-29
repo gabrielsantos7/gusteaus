@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+body {
+    background-image: url('../img/Login/backgroud\ login.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.font-satisfy {
+    font-family: "Satisfy", cursive;
+}
+
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-yellow{
+    color:#ffb03b;
+}
+
+.font-white{
+    color:#ffffff;
+}
+
+.fw-bold {
+    font-weight: 600;
+}
+
+.bg-yellow {
+    background-color:#ffb03b;
+}
+
+.bg-gray {
+    background-color: #444;
+}
+
+h2.font-satisfy {
+    font-size: 2.5rem;
+}
+
+form .form-label {
+    color: #ffb03b;
+}
+
+form {
+    width: 550px;
+    max-width: 95%;
+}
+
+#btn-login, #btn-cadastro {
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+    border-radius: 30px;
+}
+
+#btn-login:hover, #btn-cadastro:hover {
+    transform: scale(1.1);
+}
+
+#btn-cadastro:hover {
+    color:#ffb03b; 
+}
+
+form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    color: #fff;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+form .form-control:focus {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+input::placeholder {
+    color: #919191;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}

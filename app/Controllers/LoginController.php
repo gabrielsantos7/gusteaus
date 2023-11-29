@@ -6,8 +6,7 @@ use Gusteaus\Core\Controller;
 class LoginController extends Controller {
   public function login() 
   {
-    echo "Login";
-    // return $this->loadView('home');
+    $this->loadView('login');
   }
 
   public function createAccount()
