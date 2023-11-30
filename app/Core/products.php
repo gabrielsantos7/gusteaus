@@ -18,13 +18,13 @@ $sideDishes = [
   [
     'imageUrl' => BASE_IMG . 'Acompanhamentos/parmentier.jpg',
     'name' => 'Parmentier',
-    'price' => 11.50,
+    'price' => 11.49,
     'category' => 'Acompanhamento',
   ],
   [
     'imageUrl' => BASE_IMG . 'Acompanhamentos/sopa.jpg',
     'name' => 'Sopa de Cebola',
-    'price' => 5.95,
+    'price' => 12.95,
     'category' => 'Acompanhamento',
   ],
 ];
@@ -33,19 +33,19 @@ $mainDishes = [
   [
     'imageUrl' => BASE_IMG . 'Pratos Principais/crepe.jpg',
     'name' => 'Crêpe',
-    'price' => 10.50,
+    'price' => 11.99,
     'category' => 'Prato Principal',
   ],
   [
     'imageUrl' => BASE_IMG . 'Pratos Principais/croque madame.jpg',
     'name' => 'Croque Madame',
-    'price' => 9.25,
+    'price' => 15.95,
     'category' => 'Prato Principal',
   ],
   [
     'imageUrl' => BASE_IMG . 'Pratos Principais/gigot agneau.jpg',
     'name' => 'Gigot d\'Agneau',
-    'price' => 15.50,
+    'price' => 35.49,
     'category' => 'Prato Principal',
   ],
   [
@@ -58,30 +58,31 @@ $mainDishes = [
 
 $drinks = [
   [
-    'imageUrl' => BASE_IMG . 'Bebidas/la citadelle.png',
-    'name' => 'La Citadelle',
-    'price' => 14.75,
-    'category' => 'Bebida',
-  ],
-  [
-    'imageUrl' => BASE_IMG . 'Bebidas/le ronsay.png',
-    'name' => 'Le Ronsay',
-    'price' => 13.25,
-    'category' => 'Bebida',
-  ],
-  [
     'imageUrl' => BASE_IMG . 'Bebidas/lillet.jpg',
     'name' => 'Lillet',
-    'price' => 7.50,
+    'price' => 7.49,
     'category' => 'Bebida',
   ],
   [
-    'imageUrl' => BASE_IMG . 'Bebidas/veuve.jpg',
-    'name' => 'Veuve Clicquot',
-    'price' => 89.99,
+    'imageUrl' => BASE_IMG . 'Bebidas/french-75.jpg',
+    'name' => 'French 75',
+    'price' => 12.49,
     'category' => 'Bebida',
-  ]
+  ],
+  [
+    'imageUrl' => BASE_IMG . 'Bebidas/french-connection.jpg',
+    'name' => 'French Connection',
+    'price' => 10.75,
+    'category' => 'Bebida',
+  ],
+  [
+    'imageUrl' => BASE_IMG . 'Bebidas/french-kiss-martini.jpg',
+    'name' => 'French Kiss Martini',
+    'price' => 11.25,
+    'category' => 'Bebida',
+  ],
 ];
+
 
 $desserts = [
   [
@@ -99,13 +100,13 @@ $desserts = [
   [
     'imageUrl' => BASE_IMG . 'Sobremesas/macaron.jpg',
     'name' => 'Macaron',
-    'price' => 2.99,
+    'price' => 3.99,
     'category' => 'Sobremesa',
   ],
   [
     'imageUrl' => BASE_IMG . 'Sobremesas/petit gateau.png',
     'name' => 'Petit Gateau',
-    'price' => 8.50,
+    'price' => 8.49,
     'category' => 'Sobremesa',
   ]
 ];

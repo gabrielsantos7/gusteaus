@@ -5,7 +5,7 @@ $title = 'Cardápio';
 
 require './app/Core/products.php';
 
-$bestSellers = [$mainDishes[1], $mainDishes[2],  $drinks[3], $desserts[3]];
+$bestSellers = [$mainDishes[1], $mainDishes[2],  $drinks[2], $desserts[3]];
 
 require VIEW_PATH .  'components/header.php'
 ?>
