@@ -3,7 +3,6 @@ $cssPath = PUBLIC_PATH . 'css/login.css';
 $jsPath = PUBLIC_PATH . 'js/cadastrar.js';
 $title = 'Cadastrar';
 
-
 require VIEW_PATH .  'components/header.php'
 ?>
 
@@ -14,11 +13,11 @@ require VIEW_PATH .  'components/header.php'
         Seja Bem Vindo!
       </h2>
 
-      <h3 class="font-poppins text-center pt-2 font-white">
+      <h3 class="font-poppins text-center pt-2 font-white" id="h3-form-title">
         Cadastro
       </h3>
 
-      <div class="d-flex justify-content-center align-items-center">
+      <div class=" d-flex justify-content-center align-items-center">
         <form action="" id="form-cadastro" class="py-3">
 
           <div class="ctn-1 d-none">
@@ -58,6 +57,27 @@ require VIEW_PATH .  'components/header.php'
             </div>
           </div>
           <div class="ctn-2">
+            <div class="col-12 my-3">
+              <label for="cidade" class="form-label font-poppins fw-bold">Cidade:</label>
+              <input required type="cidade" class="form-control" name="cidade" id="cidade" placeholder="Cidade" />
+            </div>
+
+            <div class="col-12 my-3">
+              <label for="bairro" class="form-label font-poppins fw-bold">Bairro:</label>
+              <input required type="bairro" class="form-control" name="bairro" id="bairro" placeholder="Bairro" />
+            </div>
+
+            <div class="row pl-3 my-3">
+              <div class="col-9">
+                <label for="rua" class="form-label font-poppins fw-bold">Rua:</label>
+                <input required type="rua" class="form-control" name="rua" id="rua" placeholder="Rua" />
+              </div>
+
+              <div class="col-3">
+                <label for="numero" class="form-label font-poppins fw-bold">Número:</label>
+                <input required type="numero" class="form-control" name="numero" id="numero" placeholder="Número" />
+              </div>
+            </div>
 
           </div>
         </form>
