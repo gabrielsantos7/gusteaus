@@ -55,6 +55,11 @@ require VIEW_PATH .  'components/header.php'
                   placeholder="Escolha uma data..." />
               </div>
             </div>
+
+            <div class="row d-flex justify-content-end align-items-end mr-4">
+              <button class="btn bg-yellow fw-bold py-2 px-4" id="btn-prosseguir">Próximo</button>
+            </div>
+
           </div>
           <div class="ctn-2">
             <div class="col-12 my-3">
@@ -77,6 +82,11 @@ require VIEW_PATH .  'components/header.php'
                 <label for="numero" class="form-label font-poppins fw-bold">Número:</label>
                 <input required type="numero" class="form-control" name="numero" id="numero" placeholder="Número" />
               </div>
+            </div>
+
+            <div class="row mt-4 d-flex justify-content-around align-items-center mr-4">
+              <button class="btn bg-gray fw-bold py-2 px-4" id="btn-prosseguir">Voltar</button>
+              <button class="btn bg-yellow fw-bold py-2 px-4" id="btn-prosseguir">Criar conta</button>
             </div>
 
           </div>

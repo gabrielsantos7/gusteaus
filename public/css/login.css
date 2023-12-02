@@ -19,13 +19,13 @@ form {
     max-width: 95%;
 }
 
-#btn-login, #btn-cadastro {
+#btn-login, #btn-cadastro, #btn-prosseguir {
     transition: all 0.3s ease-in-out;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     border-radius: 30px;
 }
 
-#btn-login:hover, #btn-cadastro:hover {
+#btn-login:hover, #btn-cadastro:hover, #btn-prosseguir:hover {
     transform: scale(1.1);
 }
 
