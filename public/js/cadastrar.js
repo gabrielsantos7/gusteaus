@@ -3,6 +3,11 @@ const inputSenha = document.querySelector('#senha');
 const inputConfirmacaoSenha = document.querySelector('#confirm-senha');
 const inputTelefone = document.querySelector('#telefone');
 
+const ctn1 = document.querySelector('#ctn-1');
+const ctn2 = document.querySelector('#ctn-2');
+const btnProsseguir = document.querySelector('#btn-prosseguir');
+const btnVoltar = document.querySelector('#btn-voltar');
+
 inputTelefone.addEventListener("input", function (event) {
   let input = event.target;
   let value = input.value.replace(/\D/g, ""); // Remove caracteres não numéricos
@@ -23,9 +28,37 @@ inputTelefone.addEventListener("input", function (event) {
 });
 
 form.addEventListener('submit', (e) => {
-  if(formValido()) {
+  if(formIsValid()) {
 
   } else {
     e.preventDefault();
   }
-})
+});
+
+btnVoltar.addEventListener('click', () => {
+  ctn1.classList.remove('d-none');
+  ctn2.classList.add('d-none');
+});
+
+btnProsseguir.addEventListener('click', () => {
+  ctn1.classList.add('d-none');
+  ctn2.classList.remove('d-none');
+});
+
+function isNotEmpty(value) {
+  return value.trim() !== '';
+}
+
+function passwordsMatch(senha, confirmSenha) {
+  return senha === confirmSenha;
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+
+function formIsValid() {
+  return true;
+}
