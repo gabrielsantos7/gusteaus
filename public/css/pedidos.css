@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Open+Sans:wght@300;400;500;600;700&family=Satisfy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background: #FFB03B;
+  padding: 1.5rem 0rem;
+}
+
+.box__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 3rem;
+}
+.box__header h1 {
+  font-size: 3.5rem;
+}
+.box__header img {
+  width: 12rem;
+}
+
+nav {
+  list-style: none;
+  padding-left: 3rem;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+nav ul .active {
+  background-color: #fff;
+  border-radius: 7px;
+  padding-bottom: 1.8rem;
+}
+nav ul li {
+  padding-right: 2rem;
+}
+nav ul li :hover {
+  color: #000 !important;
+}
+nav ul a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #000;
+  padding: 0.5rem 2rem;
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.tab-content .tab-pane {
+  border: 1px #000 solid;
+  border-radius: 20px;
+  padding: 3rem;
+}
+@media (max-width: 820px) {
+  .tab-content .tab-pane {
+    padding: 3rem 0rem;
+  }
+}
+.tab-content .tab-pane .box {
+  width: 60vw;
+}
+.tab-content .tab-pane .box h2 {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.tab-content .tab-pane .box .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 0;
+}
+.tab-content .tab-pane .box .container .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 1px solid #a2a2a2;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  width: 390px;
+}
+@media (max-width: 1369px) {
+  .tab-content .tab-pane .box .container .card {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .tab-content .tab-pane .box .container .card {
+    margin-right: 0rem;
+    width: 90%;
+  }
+}
+.tab-content .tab-pane .box .container .card img {
+  width: 13rem;
+}
+.tab-content .tab-pane .box .container .card .read {
+  margin-left: 1rem;
+}
+.tab-content .tab-pane .box .container .card .read h5 {
+  font-family: "Satisfy", cursive;
+  margin-bottom: 1.5rem;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__espera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__espera a {
+  border-radius: 50%;
+  padding: 0rem 0.8rem;
+  height: 2.2rem;
+  background: cadetblue;
+  color: #fff;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 1.3rem;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__espera a:hover {
+  text-decoration: none !important;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__espera a:nth-child(1) {
+  background: #FF3232;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__espera a:nth-child(2) {
+  background: #60E43F;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__espera a:nth-child(3) {
+  background: #FFD600;
+  width: 2rem;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__empreparacao a {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  padding: 0.5rem;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__empreparacao a:hover {
+  text-decoration: none !important;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__empreparacao a:nth-child(1) {
+  background: #60E43F;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__empreparacao a:nth-child(2) {
+  background: #FFD600;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__entrega a {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  padding: 0.5rem;
+  background: #444444;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__entrega a img {
+  width: 1.5rem;
+}
+.tab-content .tab-pane .box .container .card .read .buttons__entrega a:hover {
+  text-decoration: none !important;
+}/*# sourceMappingURL=global.css.map */
