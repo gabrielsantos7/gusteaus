@@ -2,10 +2,8 @@
 
 namespace Gusteaus\Core;
 
-
 class Database
 {
-
 
     protected \PDO $conexao;
     protected \PDOStatement $stmt;
@@ -44,7 +42,5 @@ class Database
         return $this->stmt->fetchObject($classe);
 
     }
-
-
 
 }

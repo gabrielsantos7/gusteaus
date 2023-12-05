@@ -29,10 +29,6 @@ form {
     transform: scale(1.1);
 }
 
-#btn-cadastro:hover {
-    color:#ffb03b; 
-}
-
 form .form-control {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0;

@@ -36,7 +36,7 @@
   font-weight: 600;
 }
 
-.bg-yellow {
+.bg-yellow, .bg-yellow:hover {
   background-color:#ffb03b;
 }
 

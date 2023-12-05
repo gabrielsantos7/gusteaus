@@ -9,9 +9,8 @@ class LoginController extends Controller {
     $this->loadView('login');
   }
 
-  public function createAccount()
+  public function createAccount() 
   {
-    echo "Create Account";
-    // return $this->loadView('home');
+    $this->loadView('cadastrar');
   }
 }
