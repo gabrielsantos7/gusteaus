@@ -1,12 +1,23 @@
-const form = document.querySelector('#form-cadastro');
+const inputNome = document.querySelector('#nome');
+const inputEmail = document.querySelector('#email');
 const inputSenha = document.querySelector('#senha');
-const inputConfirmacaoSenha = document.querySelector('#confirm-senha');
+const inputCheckbox = document.querySelector('#mostrar-senha');
 const inputTelefone = document.querySelector('#telefone');
+const inputDataNascimento = document.querySelector('#data-nascimento');
+
+const inputCidade = document.querySelector('#cidade');
+const inputBairro = document.querySelector('#bairro');
+const inputRua = document.querySelector('#rua');
+const inputNumero = document.querySelector('#numero');
 
 const ctn1 = document.querySelector('#ctn-1');
 const ctn2 = document.querySelector('#ctn-2');
 const btnProsseguir = document.querySelector('#btn-prosseguir');
 const btnVoltar = document.querySelector('#btn-voltar');
+
+inputCheckbox.addEventListener('change', () => {
+  inputSenha.type = inputSenha.type === 'password' ? 'text' : 'password';
+})
 
 inputTelefone.addEventListener("input", function (event) {
   let input = event.target;
@@ -27,13 +38,27 @@ inputTelefone.addEventListener("input", function (event) {
   input.value = value;
 });
 
-form.addEventListener('submit', (e) => {
-  if(formIsValid()) {
-
-  } else {
-    e.preventDefault();
+inputNome.addEventListener('keydown', function(event) {
+  if (event.key >= '0' && event.key <= '9') {
+      event.preventDefault();
   }
 });
+
+inputNome.addEventListener('keyup', ()=> {
+  let inputNomeValue = inputNome.value;
+
+  let words = inputNomeValue.split(' ');
+
+  for (let i = 0; i < words.length; i++) {
+      if (words[i].length > 0) {
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+      }
+  }
+
+  let capitalizedText = words.join(' ');
+
+  inputNome.value = capitalizedText;
+})
 
 btnVoltar.addEventListener('click', () => {
   ctn1.classList.remove('d-none');
@@ -45,20 +70,19 @@ btnProsseguir.addEventListener('click', () => {
   ctn2.classList.remove('d-none');
 });
 
-function isNotEmpty(value) {
-  return value.trim() !== '';
-}
+(() => {
+  'use strict'
 
-function passwordsMatch(senha, confirmSenha) {
-  return senha === confirmSenha;
-}
+  const forms = document.querySelectorAll('.needs-validation')
 
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+  Array.from(forms).forEach(form => { 
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
 
-
-function formIsValid() {
-  return true;
-}
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()

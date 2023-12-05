@@ -6,7 +6,7 @@ body {
     height: 100vh;
 }
 
-h2.font-satisfy {
+h2 .font-satisfy {
     font-size: 2.5rem;
 }
 
@@ -15,7 +15,7 @@ form .form-label {
 }
 
 form {
-    width: 550px;
+    width: 600px;
     max-width: 95%;
 }
 
@@ -36,10 +36,9 @@ form {
 form .form-control {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0;
+    border: 2px solid transparent;
     color: #fff;
-    border: none;
-    font-family: "Poppins", sans-serif;
-    
+    font-family: "Poppins", sans-serif;  
 }
 
 form .form-control:focus {
