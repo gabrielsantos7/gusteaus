@@ -107,7 +107,7 @@ require VIEW_PATH .  'components/header.php'
               <div class="col-3">
                 <label for="numero" class="form-label font-poppins fw-bold">Número:</label>
                 <input required type="text" class="form-control" name="numero" id="numero" placeholder="Número"
-                  pattern="^[SN]|(?:[1-9]\d*)?$" title="Deve ser S/N ou um número válido." />
+                  pattern="^(S\/N|s\/n|[1-9]\d*)$" title="Deve ser S/N ou um número válido." />
                 <div class="invalid-feedback">
                   Número inválido.
                 </div>
