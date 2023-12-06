@@ -1,8 +1,4 @@
-<?php
 
-$jsPath = PUBLIC_PATH . 'js/home.js';
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

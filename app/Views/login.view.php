@@ -7,7 +7,7 @@ $title = 'Login';
 require VIEW_PATH .  'components/header.php'
 ?>
 
-<main>
+<main class="main">
 
 <section>
     <div class="container-fluid" id="ctn-form-login">
@@ -21,7 +21,7 @@ require VIEW_PATH .  'components/header.php'
       </h3>
       
       <div class="row d-flex justify-content-center align-items-center">
-        <form action="" id="form-login" class="py-3">
+        <form action="" id="form-login" class="py-3 my-5">
 
           <div class="col-12 my-3">
             <label for="email" class="form-label font-poppins fw-bold">Digite seu e-mail:</label>

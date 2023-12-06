@@ -6,7 +6,7 @@ $title = 'Cadastrar';
 require VIEW_PATH .  'components/header.php'
 ?>
 
-<main>
+<main class="main">
   <section>
     <div class="container-fluid" id="ctn-form-login">
       <h2 class="text-center font-satisfy font-yellow pt-1">
@@ -18,7 +18,7 @@ require VIEW_PATH .  'components/header.php'
       </h3>
 
       <div class=" d-flex justify-content-center align-items-center">
-        <form action="" method="post" id="form-cadastro" class="needs-validation" novalidate>
+        <form action="" method="post" id="form-cadastro" class="needs-validation my-5" novalidate>
 
           <div id="ctn-1">
             <div class="col-12 my-3">

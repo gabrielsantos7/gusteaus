@@ -6,6 +6,10 @@ body {
     height: 100vh;
 }
 
+.main{
+    padding-top: 25vh;
+}
+
 h2 .font-satisfy {
     font-size: 2.5rem;
 }
