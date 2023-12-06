@@ -1,6 +1,6 @@
 <?php
 $cssPath = PUBLIC_PATH . 'css/error404.css';
-$title = 'Cardápio';
+$title = 'Página não encontrada';
 require VIEW_PATH .  'components/header.php'
 ?>
 
