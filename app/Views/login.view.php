@@ -39,7 +39,7 @@ require VIEW_PATH .  'components/header.php'
               Entrar
             </button>
 
-            <a href="" id="btn-cadastro" class="py-2 px-5 btn mt-4 bg-gray font-poppins fw-bold font-yellow">
+            <a href="cadastrar" id="btn-cadastro" class="py-2 px-5 btn mt-4 bg-gray font-poppins fw-bold font-yellow">
               Cadastrar
             </a>
           </div>

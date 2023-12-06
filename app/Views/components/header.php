@@ -1,3 +1,8 @@
+<?php
+
+$jsPath = PUBLIC_PATH . 'js/home.js';
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,15 +36,36 @@
   <link rel="shortcut icon" href="<?=PUBLIC_PATH . 'img/Main/favicon.ico'?>" type="image/x-icon">
 
   <title><?=$title?></title>
+
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="">Oi</a></li>
-        <li><a href="">Oi de novo</a></li>
-        <li><a href="">link no header</a></li>
-      </ul>
-    </nav>
+<header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto">
+        <!-- <h1><a href="index.php">Gusteaus</a></h1> -->
+      <a href="/gusteaus/home"><img src="<?=PUBLIC_PATH?>img/Main/gusteaus-without-bg.png" alt="Logo Gusteaus" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="/gusteaus/home">Home</a></li>
+          <li><a class="nav-link scrollto" href="/gusteaus/home#about">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="/gusteaus/home#specials">Especiais</a></li>
+          <li><a class="nav-link scrollto" href="/gusteaus/home#events">Eventos</a></li>
+          <li><a class="nav-link scrollto" href="/gusteaus/home#gallery">Imagens</a></li>
+          <li><a class="nav-link scrollto" href="/gusteaus/home#chefs">Chefs</a></li>
+          <li><a class="nav-link scrollto" href="cardapio">Cardápio</a></li>
+          <li><a class="nav-link scrollto" href="cardapio#reserva">Reserve uma Mesa</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <!-- <a href="cardapio#reserva" class="book-a-table-btn scrollto">Reserve uma Mesa</a> -->
+      <a href="login" class="book-a-table-btn scrollto">Sing-in / Sing-up</a>
+
+    </div>
+
+    
   </header>

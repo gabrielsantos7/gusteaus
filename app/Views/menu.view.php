@@ -335,7 +335,7 @@ require VIEW_PATH .  'components/header.php'
   </section>
 
   <!-- Seção do Form -->
-  <section>
+  <section id="reserva">
     <div class="container-fluid" id="ctn-form-reserva">
       <form action="" class="my-5" id="form-reserva">
         <h2 class="text-center font-satisfy text-yellow pt-5">
