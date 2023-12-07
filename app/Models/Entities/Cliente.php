@@ -2,6 +2,8 @@
 
 namespace Gusteaus\Models\Entities;
 
+use Gusteaus\Core\Database;
+
 class Cliente {
   private int $idCliente;
   private string $nomeCompleto;
@@ -10,6 +12,24 @@ class Cliente {
   private string $dataNascimento;
   private int $telefoneIdTelefone;
   private int $enderecoIdEndereco;
+  
+  protected \PDO $conexao;
+  protected \PDOStatement $stmt;
+
+  public function __construct()
+  {
+    
+  }
+
+  public function insert() {
+    $db = new Database();
+    $sql = "INSERT INTO Gusteaus.cliente (nome_completo, email, senha, data_nascimento, telefone_id_telefone, endereco_id_endereco)
+    VALUES (?,?,?,?,?,?);";
+    $dados = ['Gabriel', 'gabriel@exemplo.com', 'senha123', '1998-01-20', 2, 2];
+    
+    // Se exibir true é porque deu certo
+    var_dump($db->execute($sql, $dados));
+  }
 
   public function getIdCliente() {
     return $this->idCliente;

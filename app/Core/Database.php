@@ -10,14 +10,16 @@ class Database
 
     public function __construct()
     {
-        $servidor = DB['servidor'];
-        $banco = DB['banco'];
-        $usuario = DB['usuario'];
-        $senha = DB['senha'];
+        $string = "mysql:host=" . BD['server'] . ";port=" . BD['port'] . ";dbname=" . BD['database'] . ";";
 
-        $dsn = "mysql:host={$servidor};dbname={$banco}";
+        $user = BD['user'];
+        $password = BD['password'];
 
-        $this->conexao = new \PDO($dsn,$usuario,$senha);       
+        try {
+            $this->conexao = new \PDO($string, $user, $password);
+        } catch (\PDOException $e) {
+            die("Erro na conexão com o banco de dados: " . $e->getMessage());
+        }          
 
     }
 
