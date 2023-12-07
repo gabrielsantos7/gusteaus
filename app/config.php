@@ -8,5 +8,5 @@ define('DB', [
     'servidor' => "localhost",
     'banco' => "gusteaus",
     'usuario' => 'root',
-    'senha' => ''
+    'senha' => 'root'
 ]);
