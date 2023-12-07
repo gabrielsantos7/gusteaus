@@ -2,34 +2,30 @@
 
 namespace Gusteaus\Models\Entities;
 
-use Gusteaus\Core\Database;
-
 class Cliente {
-  private int $idCliente;
-  private string $nomeCompleto;
-  private string $email;
-  private string $senha;
-  private string $dataNascimento;
-  private int $telefoneIdTelefone;
-  private int $enderecoIdEndereco;
-  
-  protected \PDO $conexao;
-  protected \PDOStatement $stmt;
+  protected int $idCliente;
+  protected string $nomeCompleto;
+  protected string $email;
+  protected string $senha;
+  protected string $dataNascimento;
+  protected int $telefoneIdTelefone;
+  protected int $enderecoIdEndereco;
 
-  public function __construct()
-  {
-    
-  }
-
-  public function insert() {
-    $db = new Database();
-    $sql = "INSERT INTO Gusteaus.cliente (nome_completo, email, senha, data_nascimento, telefone_id_telefone, endereco_id_endereco)
-    VALUES (?,?,?,?,?,?);";
-    $dados = ['Gabriel', 'gabriel@exemplo.com', 'senha123', '1998-01-20', 2, 2];
-    
-    // Se exibir true é porque deu certo
-    var_dump($db->execute($sql, $dados));
-  }
+  public function __construct(
+    string $nomeCompleto,
+    string $email,
+    string $senha,
+    string $dataNascimento,
+    int $telefoneIdTelefone,
+    int $enderecoIdEndereco
+) {
+    $this->nomeCompleto = $nomeCompleto;
+    $this->email = $email;
+    $this->senha = $senha;
+    $this->dataNascimento = $dataNascimento;
+    $this->telefoneIdTelefone = $telefoneIdTelefone;
+    $this->enderecoIdEndereco = $enderecoIdEndereco;
+}
 
   public function getIdCliente() {
     return $this->idCliente;
