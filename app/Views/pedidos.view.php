@@ -13,7 +13,7 @@ require VIEW_PATH .  'components/header.php'
 						<h2>Espera</h2>
 						<div class="container">
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -25,7 +25,7 @@ require VIEW_PATH .  'components/header.php'
 							</div>
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -38,7 +38,7 @@ require VIEW_PATH .  'components/header.php'
 							
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -50,7 +50,7 @@ require VIEW_PATH .  'components/header.php'
 							</div>
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -62,7 +62,7 @@ require VIEW_PATH .  'components/header.php'
 							</div>
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -74,7 +74,7 @@ require VIEW_PATH .  'components/header.php'
 							</div>
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -86,7 +86,7 @@ require VIEW_PATH .  'components/header.php'
 							</div>
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -98,7 +98,7 @@ require VIEW_PATH .  'components/header.php'
 							</div>
 							
 							<div class="card">
-								<img src="./img/macarrao.png" alt="Foto da comida no card" />
+								<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 								<div class="read">
 									<h5>Macarrão na chapa</h5>
 									<div class="buttons__espera">
@@ -117,7 +117,7 @@ require VIEW_PATH .  'components/header.php'
 					<h2>Em preparação</h2>
 					<div class="container">
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -128,7 +128,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -139,7 +139,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 					
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -150,7 +150,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 					
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -161,7 +161,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 					
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -172,7 +172,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 					
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -183,7 +183,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 					
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -194,7 +194,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 					
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__empreparacao">
@@ -213,7 +213,7 @@ require VIEW_PATH .  'components/header.php'
 					<h2>Entrega</h2>
 					<div class="container">
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -223,7 +223,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -233,7 +233,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -243,7 +243,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -253,7 +253,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -263,7 +263,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -273,7 +273,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
@@ -283,7 +283,7 @@ require VIEW_PATH .  'components/header.php'
 						</div>
 			
 						<div class="card">
-							<img src="./img/macarrao.png" alt="Foto da comida no card" />
+							<img src="../../public/img/Products/macarrao.png" alt="Foto da comida no card" />
 							<div class="read">
 								<h5>Macarrão na chapa</h5>
 								<div class="buttons__entrega">
