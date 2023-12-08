@@ -22,8 +22,21 @@ $cliente->endereco_id_endereco = 2;
 
 
 $clienteDAO = new ClienteDAO();
-$clienteDAO->insert($cliente);
+// $clienteDAO->insert($cliente);
 // var_dump($clienteDAO->getAll());
 // var_dump($clienteDAO->getById(6));
+// $cliente2 = $clienteDAO->getById(6);
+// $cliente2->nome_completo = 'Nome Editado DNV';
+// $cliente2->email = 'email_editado@exemplo.com';
+// $cliente2->senha = 'senha_editada';
+// $cliente2->data_nascimento ='2000-01-01';
+// $cliente2->telefone_id_telefone = 2;
+// $cliente2->endereco_id_endereco = 2;
+
+// var_dump($clienteDAO->edit($cliente2));
+
+// $cliente3 = $clienteDAO->getById(10);
+
+// var_dump($clienteDAO->delete($cliente3));
 
 Router::exec($url);
