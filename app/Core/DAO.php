@@ -11,7 +11,7 @@ abstract class DAO
 
     
  
-    public static function inserir(Entity $entidade)
+    public static function insert(Entity $entidade)
     {
         $db = new Database;
         $tabela = static::$tabela;
@@ -44,10 +44,11 @@ abstract class DAO
     }
 
     
-    public static function editar(Entity $entidade)
+    public static function edit(Entity $entidade)
     {
         $db = new Database;
         $tabela = static::$tabela;
+        $columnId = static::$columnId; 
    
         $sql = "UPDATE {$tabela} SET";
         
@@ -57,7 +58,7 @@ abstract class DAO
 
         foreach($propriedades as $propriedade => $valor)
         {
-            if($propriedade != 'id' && !is_null($entidade->$propriedade))
+            if($propriedade != $columnId && !is_null($entidade->$propriedade))
             {
                 $campos .= " {$propriedade} = ?,";
                 array_push($dados,$valor); 
@@ -65,11 +66,8 @@ abstract class DAO
         }
         
         $campos = rtrim($campos,',');
-        $sql .= "{$campos} WHERE id = ?";
-        array_push($dados,$entidade->id);
-
-                
-
+        $sql .= "{$campos} WHERE {$columnId} = ?";
+        array_push($dados, $entidade->$columnId);        
         return $db->execute($sql,$dados);
 
     }
@@ -93,14 +91,14 @@ abstract class DAO
         $tabela = static::$tabela;
         $columnId = static::$columnId;
         
-        $sql = "SELECT * FROM {$tabela} WHERE {$columnId} = ?"; // Utilize a variável $columnId
+        $sql = "SELECT * FROM {$tabela} WHERE {$columnId} = ?"; 
         
         $db->execute($sql, [$id]);
     
         return $db->get(static::$classe);
     }
     
-    public static function excluir(Entity $entidade)
+    public static function delete(Entity $entidade)
     {
         $db = new Database;
         $tabela = static::$tabela;
@@ -108,7 +106,7 @@ abstract class DAO
         
         $sql = "DELETE FROM {$tabela} WHERE {$columnId} = ?";
         
-        return $db->execute($sql, [$entidade->id]); 
+        return $db->execute($sql, [$entidade->$columnId]); 
     }
 
 }
