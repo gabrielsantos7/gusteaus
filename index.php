@@ -12,9 +12,18 @@ require __DIR__ . '/app/config.php';
 
 $url = $_GET['url'] ?? '';
 
-$cliente = new Cliente('Cláudio', 'claudim@exemplo.com', 'senha123', '2009-06-10', 2, 2);
+$cliente = new Cliente();
+$cliente->nome_completo = 'Cláudio';
+$cliente->email = 'claudim@exemplo.com';
+$cliente->senha = 'senha123';
+$cliente->data_nascimento ='2009-06-10';
+$cliente->telefone_id_telefone = 2;
+$cliente->endereco_id_endereco = 2;
+
 
 $clienteDAO = new ClienteDAO();
 $clienteDAO->insert($cliente);
+// var_dump($clienteDAO->getAll());
+// var_dump($clienteDAO->getById(6));
 
 Router::exec($url);

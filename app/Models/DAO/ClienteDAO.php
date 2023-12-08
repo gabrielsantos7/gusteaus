@@ -13,16 +13,33 @@ class ClienteDAO {
     VALUES (?,?,?,?,?,?);";
 
     $clienteArray =[
-      $cliente->getNomeCompleto(),
-      $cliente->getEmail(),
-      $cliente->getSenha(),
-      $cliente->getDataNascimento(),
-      $cliente->getTelefoneIdTelefone(),
-      $cliente->getEnderecoIdEndereco()
-  ]; 
+      $cliente->nome_completo,
+      $cliente->email,
+      $cliente->senha,
+      $cliente->data_nascimento,
+      $cliente->telefone_id_telefone,
+      $cliente->endereco_id_endereco
+    ]; 
     
     // Se exibir true é porque deu certo
     var_dump($db->execute($sql, $clienteArray));
+  }
+
+  public function getAll() {
+    $db = new Database();
+    $sql = "SELECT * FROM cliente";
+    $db->execute($sql);
+
+    return $db->getAll(Cliente::class);
+  }
+
+  public function getById($id) {
+    $db = new Database();
+    $sql = "SELECT * FROM cliente WHERE id_cliente = ?;";
+    $db->execute($sql, [$id]);
+
+    return $db->get(Cliente::class);
+    
   }
 
 }
