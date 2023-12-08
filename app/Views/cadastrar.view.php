@@ -18,7 +18,8 @@ require VIEW_PATH .  'components/header.php'
       </h3>
 
       <div class=" d-flex justify-content-center align-items-center">
-        <form action="" method="post" id="form-cadastro" class="needs-validation my-5" novalidate>
+        <form action="/gusteaus/cadastrarconta" method="post" id="form-cadastro" class="needs-validation my-5"
+          novalidate>
 
           <div id="ctn-1">
             <div class="col-12 my-3">

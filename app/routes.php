@@ -2,10 +2,10 @@
 
 use Gusteaus\Core\Router;
 
-Router::add('/', 'HomeController', 'index');
-Router::add('/home', 'HomeController', 'index');
-Router::add('/cardapio', 'MenuController', 'index');
-Router::add('/pedido', 'PedidosController', 'index');
-Router::add('/login', 'LoginController', 'login');
-Router::add('/cadastrar', 'LoginController', 'createAccount');
-Router::add('__error', 'ErrorController', 'error404');
+Router::get('/', 'HomeController', 'index');
+Router::get('/home', 'HomeController', 'index');
+Router::get('/cardapio', 'MenuController', 'index');
+Router::get('/pedido', 'PedidosController', 'index');
+Router::get('/login', 'LoginController', 'login');
+Router::get('/cadastrar', 'LoginController', 'createAccount');
+Router::post('/cadastrarconta', 'LoginController', 'cadastrarConta');

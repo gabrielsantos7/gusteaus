@@ -7,23 +7,34 @@ class Router
 
     protected static array $rotas = []; 
 
-    public static function add(string $rota, string $controller, string $acao)
-    {
-       static::$rotas[$rota] = [$controller, $acao];
+    public static function get(string $rota, string $controller, string $acao) {
+        static::add($rota, $controller, $acao, 'GET');
     }
 
-    public static function exec(string $url)
+    public static function post(string $rota, string $controller, string $acao) {
+        static::add($rota, $controller, $acao, 'POST');
+    }
+
+    protected static function add(string $rota, string $controller, string $acao, string $metodo)
+    {
+       static::$rotas[$rota] = [$controller, $acao, $metodo];
+    }
+
+    public static function exec(string $url, string $metodoHTTP)
     {
         $url = "/" . $url;
         $rotas = static::$rotas;
 
         if( array_key_exists($url, $rotas) ){
-            [$controller,$metodo] = $rotas[$url];   
+            [$controller,$acao, $metodo] = $rotas[$url];  
+            if($metodo == $metodoHTTP) {
+                static::loadController($controller,$acao);
+            } else {
+                static::error(405);
+            }
         }else{
-            [$controller,$metodo] = $rotas['__error'];         
+            static::error(404);        
         }
-
-        static::loadController($controller,$metodo);
     }
 
     protected static function loadController($controller,$metodo)
@@ -32,5 +43,14 @@ class Router
         $ctr = new $controller();
         $ctr->$metodo();
     }
+
+    protected static function error(int $codigo = 400)
+    {
+        http_response_code($codigo);
+        $controller = NS_CONTROLLERS. 'ErrorController';
+        $ctr = new $controller();
+        $ctr->error($codigo);
+    }
+
 
 }

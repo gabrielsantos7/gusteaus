@@ -12,15 +12,15 @@ require __DIR__ . '/app/config.php';
 
 $url = $_GET['url'] ?? '';
 
-$cliente = new Cliente();
-$cliente->nome_completo = 'Teste Teste';
-$cliente->email = 'teste@exemplo.com';
-$cliente->senha = 'lalalalalala';
-$cliente->data_nascimento ='2010-10-10';
-$cliente->telefone_id_telefone = 2;
-$cliente->endereco_id_endereco = 2;
+// $cliente = new Cliente();
+// $cliente->nome_completo = 'Teste Teste';
+// $cliente->email = 'teste@exemplo.com';
+// $cliente->senha = 'lalalalalala';
+// $cliente->data_nascimento ='2010-10-10';
+// $cliente->telefone_id_telefone = 2;
+// $cliente->endereco_id_endereco = 2;
 
-$clienteDAO = new ClienteDAO();
+// $clienteDAO = new ClienteDAO();
 // var_dump($clienteDAO->insert($cliente));
 // var_dump($clienteDAO->getAll()[0]->nome_completo);
 // var_dump($clienteDAO->getById(6)->nome_completo);
@@ -38,4 +38,5 @@ $clienteDAO = new ClienteDAO();
 
 // var_dump($clienteDAO->delete($cliente3));
 
-Router::exec($url);
+$metodoHTTP = $_SERVER['REQUEST_METHOD'];
+Router::exec($url, $metodoHTTP);

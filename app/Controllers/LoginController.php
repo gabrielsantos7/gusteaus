@@ -13,4 +13,9 @@ class LoginController extends Controller {
   {
     $this->loadView('cadastrar');
   }
+
+  public function cadastrarConta() 
+  {
+    var_dump($_POST);
+  }
 }
