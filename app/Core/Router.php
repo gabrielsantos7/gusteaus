@@ -2,8 +2,7 @@
 
 namespace Gusteaus\Core;
 
-class Router
-{
+class Router {
 
     protected static array $rotas = []; 
 

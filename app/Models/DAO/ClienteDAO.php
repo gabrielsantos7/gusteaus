@@ -3,7 +3,6 @@
 namespace Gusteaus\Models\DAO;
 
 use Gusteaus\Core\DAO;
-use Gusteaus\Core\Database;
 use Gusteaus\Models\Entities\Cliente;
 
 class ClienteDAO extends DAO {

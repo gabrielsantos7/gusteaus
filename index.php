@@ -11,7 +11,7 @@ require __DIR__ . '/app/routes.php';
 require __DIR__ . '/app/config.php';
 
 $url = $_GET['url'] ?? '';
-
+unset($_GET['url']);
 // $cliente = new Cliente();
 // $cliente->nome_completo = 'Teste Teste';
 // $cliente->email = 'teste@exemplo.com';
