@@ -2,10 +2,15 @@
 
 namespace Gusteaus\Models\DAO;
 
+use Gusteaus\Core\DAO;
 use Gusteaus\Core\Database;
 use Gusteaus\Models\Entities\Cliente;
 
-class ClienteDAO {
+class ClienteDAO extends DAO {
+
+  protected static string $tabela = "Gusteaus.cliente";
+  protected static string $classe = Cliente::class;
+  protected static string $columnId = "id_cliente";
   
   public function insert(Cliente $cliente) {
     $db = new Database();
@@ -25,22 +30,22 @@ class ClienteDAO {
     var_dump($db->execute($sql, $clienteArray));
   }
 
-  public function getAll() {
-    $db = new Database();
-    $sql = "SELECT * FROM Gusteaus.cliente";
-    $db->execute($sql);
+  // public function getAll() {
+  //   $db = new Database();
+  //   $sql = "SELECT * FROM Gusteaus.cliente";
+  //   $db->execute($sql);
 
-    return $db->getAll(Cliente::class);
-  }
+  //   return $db->getAll(Cliente::class);
+  // }
 
-  public function getById($id) {
-    $db = new Database();
-    $sql = "SELECT * FROM Gusteaus.cliente WHERE id_cliente = ?;";
-    $db->execute($sql, [$id]);
+  // public function getById($id) {
+  //   $db = new Database();
+  //   $sql = "SELECT * FROM Gusteaus.cliente WHERE id_cliente = ?;";
+  //   $db->execute($sql, [$id]);
 
-    return $db->get(Cliente::class);
+  //   return $db->get(Cliente::class);
     
-  }
+  // }
 
   public function edit(Cliente $cliente) {
     $db = new Database();

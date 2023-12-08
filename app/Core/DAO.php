@@ -7,6 +7,7 @@ abstract class DAO
 
     protected static string $tabela = "";
     protected static string $classe = \stdClass::class;
+    protected static string $columnId = "";
 
     
  
@@ -90,22 +91,24 @@ abstract class DAO
     {
         $db = new Database;
         $tabela = static::$tabela;
-        $sql = "SELECT * FROM {$tabela} WHERE id = ?";
+        $columnId = static::$columnId;
         
-        $db->execute($sql,[$id]);
-
+        $sql = "SELECT * FROM {$tabela} WHERE {$columnId} = ?"; // Utilize a variável $columnId
+        
+        $db->execute($sql, [$id]);
+    
         return $db->get(static::$classe);
     }
-
+    
     public static function excluir(Entity $entidade)
     {
         $db = new Database;
         $tabela = static::$tabela;
-        $sql = "DELETE FROM {$tabela} WHERE id = ?";
-
-        return $db->execute($sql,[$entidade->id]);
+        $columnId = static::$columnId; 
+        
+        $sql = "DELETE FROM {$tabela} WHERE {$columnId} = ?";
+        
+        return $db->execute($sql, [$entidade->id]); 
     }
-
-
 
 }

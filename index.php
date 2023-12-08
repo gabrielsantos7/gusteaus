@@ -26,7 +26,7 @@ $clienteDAO = new ClienteDAO();
 // var_dump($clienteDAO->getAll());
 // var_dump($clienteDAO->getById(6));
 // $cliente2 = $clienteDAO->getById(6);
-// $cliente2->nome_completo = 'Nome Editado DNV';
+// $cliente2->nome_completo = 'Nome Editado DNV DNV';
 // $cliente2->email = 'email_editado@exemplo.com';
 // $cliente2->senha = 'senha_editada';
 // $cliente2->data_nascimento ='2000-01-01';
@@ -35,7 +35,7 @@ $clienteDAO = new ClienteDAO();
 
 // var_dump($clienteDAO->edit($cliente2));
 
-// $cliente3 = $clienteDAO->getById(10);
+// $cliente3 = $clienteDAO->getById(16);
 
 // var_dump($clienteDAO->delete($cliente3));
 
