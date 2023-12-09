@@ -141,6 +141,13 @@ CREATE TABLE IF NOT EXISTS `Gusteaus`.`pedido_has_item` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+-- Inserir um novo telefone
+INSERT INTO Gusteaus.telefone (ddd, numero)
+VALUES ('77', '987654321');
+
+-- Inserir um novo endereço
+INSERT INTO Gusteaus.endereco (rua, numero, bairro, cidade)
+VALUES ('Rua Castanheiras', '554', 'Bairro Alvorada', 'Brumado');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
